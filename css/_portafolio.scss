@@ -1,0 +1,121 @@
+.portafolio {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    .imagen-portafolio {
+        flex: 1;
+        overflow: hidden;
+        height: 70rem;
+    }
+    img {
+        object-fit: cover;
+        filter: grayscale(1);
+        transition: all .250s ease;
+    }
+    .not-gray img {
+        filter: grayscale(0);
+    }
+    img:hover {
+        transform: scale(1.1);
+        filter: grayscale(0);
+    }
+    .main {
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        color: #ffffff;
+        font-size: 14rem;
+        transition: all .250s ease;
+        text-shadow: 10px 10px #000000;
+        margin: 0;
+    }
+    .main:hover,
+    .main:focus {
+        color: #a4753d;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .portafolio {
+        .main {
+            top: 30%;
+            left: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .portafolio {
+        .main {
+            top: 28%;
+            left: 22%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .portafolio {
+        .portafolio-link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                font-size: 12rem;
+            }
+            .main {
+                position: unset;
+            }
+        }
+        .imagen-portafolio {
+            height: 60rem;
+        }
+        img {
+            filter: grayscale(0);
+        }
+        .hide-900 {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .portafolio {
+        .imagen-portafolio {
+            height: 40rem;
+        }
+        .portafolio-link {
+            h3 {
+                font-size: 8rem;
+            }
+        }
+        .hide-600 {
+            display: none;
+        }
+    }
+}
+
+
+/*** Portafolio page***/
+
+.portafolio-page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .contenedor-portafolio {
+        background-color: #dfdfdf;
+        width: 100%;
+        padding: 3rem 0;
+        outline: 3px solid #000000;
+        outline-offset: -2rem;
+        box-shadow: 2px 2px 1rem #000000;
+    }
+}

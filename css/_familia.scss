@@ -1,0 +1,220 @@
+.seccion-familia {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 40% 30%;
+    position: relative;
+    font-size: 1.8rem;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #131313;
+        z-index: -1;
+    }
+    .info,
+    .seccion-3,
+    .seccion-4,
+    .seccion-6 {
+        width: 80%;
+        margin: 0 auto;
+        padding: 6rem 0;
+    }
+    .seccion-3,
+    .seccion-4,
+    .seccion-6 {
+        p {
+            text-align: right;
+            margin-top: 2rem;
+            font-weight: bold;
+            border-bottom: 1px solid #131313;
+        }
+        ul {
+            margin-top: 2rem;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+    .seccion-1 p,
+    .seccion-3 ul,
+    .seccion-3 p {
+        color: #ffffff;
+    }
+    .seccion-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        .titulo {
+            color: #a4753d;
+            text-align: center;
+            margin-bottom: 4rem;
+            h3 {
+                font-size: clamp(4rem, 5vw, 7rem);
+                position: relative;
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: .15rem;
+                    left: 0;
+                    right: 0;
+                    background-color: #a4753d;
+                }
+                &::before {
+                    top: 0;
+                }
+                &::after {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    .seccion-2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding-left: 10%;
+        .img-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            .img-sec {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 39.5%;
+                img {
+                    height: 49.5%;
+                    width: 100%;
+                }
+            }
+            .img-main {
+                width: 59.5%;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .seccion-3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        p {
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+    .seccion-4 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .seccion-5 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding-right: 10%;
+        .img-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            height: 100%;
+            .img-main {
+                display: flex;
+                flex-direction: column;
+                width: 59.5%;
+                justify-content: space-between;
+                img {
+                    height: 49.5%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .img-sec {
+                display: flex;
+                flex-direction: column;
+                width: 39.5%;
+                justify-content: space-between;
+                img {
+                    height: 49.5%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .seccion-6 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .seccion-familia {
+        display: flex;
+        flex-direction: column;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #131313;
+            z-index: -1;
+        }
+        .seccion-1 {
+            background-image: url(../img/familia_1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 6rem 0;
+            position: relative;
+            z-index: 1;
+            order: 1;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #00000090;
+                z-index: -1;
+            }
+        }
+        .seccion-2 {
+            order: 4;
+            padding-left: 0;
+        }
+        .seccion-3 {
+            order: 2;
+        }
+        .seccion-4 {
+            order: 3;
+            ul,
+            p {
+                color: #ffffff;
+            }
+            p {
+                border-color: #ffffff;
+            }
+        }
+        .seccion-5 {
+            order: 5;
+            display: none;
+        }
+        .seccion-6 {
+            order: 6;
+            ul,
+            p {
+                color: #ffffff;
+            }
+            p {
+                border-color: #ffffff;
+            }
+        }
+    }
+}

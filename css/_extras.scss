@@ -1,0 +1,185 @@
+.seccion-extras {
+    display: grid;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-color: #131313;
+        z-index: -1;
+    }
+    p {
+        font-size: 2rem;
+    }
+    span {
+        font-weight: bold;
+    }
+    .seccion-1 {
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6% 0;
+        text-align: center;
+        color: #a4753d;
+        h3 {
+            font-size: clamp(4rem, 10vw, 8rem);
+            border-top: 1px solid #a4753d;
+            border-bottom: 1px solid #a4753d;
+        }
+    }
+    .seccion-2 {
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 5%;
+        .img-sec {
+            width: 48%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            img {
+                width: 33.3%;
+                object-fit: cover;
+            }
+        }
+        .img-main {
+            width: 48%;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .seccion-3 {
+        grid-row: 3/4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        padding: 6rem 0;
+        p {
+            font-size: 3rem;
+        }
+        .extras-precios {
+            width: 50%;
+            text-align: center;
+            padding: 0 10%;
+            .pulg {
+                font-size: 2rem;
+            }
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+        .extra-info {
+            width: 50%;
+            color: #a4753d;
+            text-align: center;
+            padding: 0 10%;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .seccion-extras {
+        .seccion-3 {
+            p {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .seccion-extras {
+        &::before {
+            background-image: url(../img/imagen-contacto3.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-color: #00000080;
+            z-index: -1;
+        }
+        .seccion-1 {
+            padding: 8% 0;
+        }
+        .seccion-2 {
+            grid-row: 2/3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0 5%;
+            .img-sec {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                img {
+                    width: 33.3%;
+                    object-fit: cover;
+                }
+            }
+            .img-main {
+                display: none;
+            }
+        }
+        .seccion-3 {
+            width: 90%;
+            margin: 0 auto;
+            .extras-precios {
+                padding: 0;
+                .pulg {
+                    font-size: 1.6rem;
+                }
+            }
+            .extra-info {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .seccion-extras {
+        &::before {
+            height: 33%;
+        }
+        &::after {
+            height: 33%;
+        }
+        .seccion-1 {
+            padding: 10% 0;
+        }
+        .seccion-3 {
+            width: 90%;
+            margin: 0 auto;
+            flex-direction: column;
+            .extras-precios {
+                padding: 0;
+                .pulg {
+                    font-size: 1.6rem;
+                }
+            }
+            .extra-info {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    }
+}

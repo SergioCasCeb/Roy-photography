@@ -1,0 +1,77 @@
+/**Pagina catalogo*/
+
+.header-secondary {
+    background-color: #000000;
+}
+
+.catalogo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+.contenedor-sidebar {
+    width: 100%;
+    background-color: #dfdfdf;
+}
+
+.sidebar-catalogo {
+    width: 90%;
+    flex-direction: row;
+    padding: 2rem 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    a {
+        color: #000000;
+        text-align: center;
+        width: 12.5%;
+        transition: color .3s ease-in-out;
+        font-weight: bold;
+    }
+    a:hover,
+    a:focus {
+        color: #a4753d;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .sidebar-catalogo {
+        flex-wrap: wrap;
+        a {
+            width: 25%;
+            margin: 1rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar-catalogo {
+        flex-wrap: wrap;
+        a {
+            width: 50%;
+            margin: 1rem 0;
+        }
+    }
+}
+
+.contenedor-secciones {
+    width: 100%;
+    ul {
+        list-style: circle;
+        padding-left: 2rem;
+    }
+    h4 {
+        color: #a4753d;
+    }
+    .precio {
+        font-weight: bold;
+        font-size: 1.7rem;
+        text-align: right;
+        border-bottom: 1px solid #ffffff;
+        margin-top: 1rem;
+    }
+}
